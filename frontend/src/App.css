@@ -1,0 +1,118 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left{
+  
+    position: relative; /* Yeh zaroori hai button ki positioning ke liye */
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    height: 100%; /* Ya 100vh */
+    /* Taaki poora interface scroll na ho */
+    border-radius: 8px;
+    background-color: #000;
+    border: 1px solid #333;
+
+}
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left {
+  background-color: #000000;
+  position: relative;
+}
+
+.left .code,
+ .code pre,
+.code pre code {
+  flex-grow: 1;             /* Yeh header ke baad bachi hui saari space le lega */
+    overflow-y: auto;    /* Jab code lamba hoga tab scrollbar dikhayega */
+    position: relative;  /* Taaki Review button iske andar sahi se position ho sake */
+    height: 100%;        /* Parent ki poori height use karega */
+    padding-bottom: 60px;
+  
+  width: 100%;
+  margin: 0;
+  border-radius: 0 0 8px 8px;
+  background-color: #0c0c0c;
+}
+
+main .left .review {
+  position: absolute;
+
+  
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  transition: all 0.2s ease-in-out;
+
+}
+
+/* 2. Hover State - ADD THIS BELOW */
+.review:hover {
+    background-color: rgb(180, 180, 255); /* Slightly deeper blue/purple */
+    transform: scale(1.05); /* Makes the button slightly bigger */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a "glow" shadow */
+}
+
+/* 3. Click State - ADD THIS BELOW */
+.review:active {
+    transform: scale(0.95); /* Shrinks slightly when you click it (haptic feel) */
+    background-color: rgb(150, 150, 255);
+}
+
+
+.controls {
+    display: flex;
+    justify-content: flex-end; /* Pushes dropdown to the right */
+    padding: 8px 12px;
+    background-color: #575151; /* Grey header bar like your image */
+}
+
+/* Custom Styled Dropdown */
+.lang-select {
+    background-color: #2d2d2d;
+    color: white;
+    border: 1px solid #555;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+}
+
+
+main .right {
+  background-color: #343434;
+  padding: 1rem 2rem;
+  font-size: 0.8rem;
+  overflow: auto;
+}
